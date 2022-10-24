@@ -13,12 +13,15 @@ import { expect, test } from "vitest";
  *   [1,2,3] [1,2]  ...
  *
  * -> For every element, we branch to add or ignore the element
+ *
+ * Time = O(n * 2^n)    (2^n = number of subsets, n = potential length of each subset)
  */
 function subsets(nums: number[]): number[][] {
   let results: number[][] = [];
   let subset: number[] = [];
 
   const backtrack = (i: number) => {
+    // end the recursion when we're at the end of the array
     if (i === nums.length) {
       results.push([...subset]);
       return;
