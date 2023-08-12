@@ -38,3 +38,6 @@ const obj = {
 };
 
 obj.printName();
+
+// https://medium.com/@griffinmichl/implementing-debounce-in-javascript-eab51a12311e
+// https://www.greatfrontend.com/questions/javascript/debounce
